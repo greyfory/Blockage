@@ -1,0 +1,130 @@
+{
+  "sources": [
+    {
+      "name": "StevenBlack's Unified hosts file",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+      "description": "Unified hosts file with base adware + malware",
+      "enabled": true
+    },
+    {
+      "name": "AdGuard DNS filter",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt",
+      "description": "AdGuard Base Filter - ad servers",
+      "enabled": true
+    },
+    {
+      "name": "EasyList",
+      "url": "https://easylist.to/easylist/easylist.txt",
+      "description": "EasyList filter",
+      "enabled": true
+    },
+    {
+      "name": "Peter Lowe's Ad and tracking server list",
+      "url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext",
+      "description": "Peter Lowe's blocklist",
+      "enabled": true
+    },
+    {
+      "name": "Dan Pollock's hosts file",
+      "url": "https://someonewhocares.org/hosts/zero/hosts",
+      "description": "Dan Pollock's hosts file",
+      "enabled": true
+    },
+    {
+      "name": "MVPS hosts file",
+      "url": "http://winhelp2002.mvps.org/hosts.txt",
+      "description": "MVPS hosts file",
+      "enabled": true
+    },
+    {
+      "name": "Malware Domain List",
+      "url": "https://www.malwaredomainlist.com/hostslist/hosts.txt",
+      "description": "Malware Domain List",
+      "enabled": true
+    },
+    {
+      "name": "AdAway Default Blocklist",
+      "url": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
+      "description": "AdAway default blocklist",
+      "enabled": true
+    },
+    {
+      "name": "hpHosts Ad and tracking servers",
+      "url": "https://hosts-file.net/ad_servers.txt",
+      "description": "hpHosts ad and tracking servers",
+      "enabled": true
+    },
+    {
+      "name": "Disconnect.me Tracking Protection",
+      "url": "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt",
+      "description": "Disconnect.me tracking protection list",
+      "enabled": true
+    },
+    {
+      "name": "Disconnect.me Ad Protection",
+      "url": "https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt",
+      "description": "Disconnect.me ad protection list",
+      "enabled": true
+    },
+    {
+      "name": "NoTracking hosts blocklist",
+      "url": "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/hostnames.txt",
+      "description": "NoTracking project hosts blocklist",
+      "enabled": true
+    },
+    {
+      "name": "Polish filters for Pi-hole",
+      "url": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hostfile.txt",
+      "description": "Polish ads and tracking filter",
+      "enabled": true
+    },
+    {
+      "name": "Perflyst and Dandelion Sprout's Smart-TV Blocklist",
+      "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt",
+      "description": "Smart TV blocklist",
+      "enabled": true
+    },
+    {
+      "name": "Firebog Suspicious Lists",
+      "url": "https://v.firebog.net/hosts/static/w3kbl.txt",
+      "description": "Firebog suspicious domains",
+      "enabled": true
+    },
+    {
+      "name": "oisd.nl Big List",
+      "url": "https://big.oisd.nl/",
+      "description": "Internet's #1 domain blocklist",
+      "enabled": true
+    },
+    {
+      "name": "1Hosts (Lite)",
+      "url": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/hosts.txt",
+      "description": "1Hosts Lite blocklist",
+      "enabled": true
+    },
+    {
+      "name": "GoodbyeAds",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt",
+      "description": "GoodbyeAds blocklist",
+      "enabled": true
+    },
+    {
+      "name": "NextDNS CNAME Cloaking List",
+      "url": "https://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains",
+      "description": "CNAME cloaking domains",
+      "enabled": true
+    },
+    {
+      "name": "HaGeZi's Multi NORMAL Blocklist",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@release/domains/multi.txt",
+      "description": "HaGeZi's comprehensive blocklist",
+      "enabled": true
+    }
+  ],
+  "settings": {
+    "timeout": 30,
+    "delay_between_requests": 1,
+    "max_retries": 3,
+    "output_format": "domains"
+  }
+}

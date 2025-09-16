@@ -1,0 +1,51 @@
+name: Update Blocklist
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-blocklist:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        
+    - name: Run blocklist compiler
+      run: |
+        python blocklist_compiler.py -o unified_blocklist.txt
+        
+    - name: Check for changes
+      id: git-check
+      run: |
+        git diff --exit-code unified_blocklist.txt || echo "changed=true" >> $GITHUB_OUTPUT
+        
+    - name: Commit and push changes
+      if: steps.git-check.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add unified_blocklist.txt blocklist_compiler.log
+        git commit -m "Update unified blocklist - $(date -u '+%Y-%m-%d %H:%M:%S UTC')" || exit 0
+        git push
+        
+    - name: Upload blocklist as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: unified-blocklist
+        path: |
+          unified_blocklist.txt
+          blocklist_compiler.log
+        retention-days: 30
