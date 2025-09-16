@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "name": "Comprehensive Pi-Hole Blocklist Collection",
+    "description": "Extensive collection of blocklists for maximum protection",
+    "version": "1.0.0",
+    "last_updated": "2024-01-01",
+    "categories": [
+      "advertising",
+      "tracking",
+      "malware",
+      "phishing",
+      "privacy",
+      "social_media",
+      "adult_content",
+      "cryptocurrency",
+      "fake_news",
+      "gambling",
+      "regional_threats"
+    ]
+  },
+  "blocklist_sources": {
+    "advertising": [
+      {
+        "name": "Steven Black's Unified Hosts",
+        "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+        "description": "Comprehensive unified hosts file with ad blocking",
+        "format": "hosts",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "AdGuard DNS Filter",
+        "url": "https://adguardteam.github.io/AdguardFilters/BaseFilter/sections/adservers.txt",
+        "description": "AdGuard's main ad servers blocklist",
+        "format": "adblock",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "EasyList",
+        "url": "https://easylist.to/easylist/easylist.txt",
+        "description": "Primary filter list that removes most adverts",
+        "format": "adblock",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "AdAway Default Blocklist",
+        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt",
+        "description": "Mobile-focused ad blocking",
+        "format": "adblock",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "Dan Pollock's Hosts",
+        "url": "https://someonewhocares.org/hosts/zero/hosts",
+        "description": "How to make the internet not suck (as much)",
+        "format": "hosts",
+        "update_frequency": "weekly"
+      }
+    ],
+    "tracking": [
+      {
+        "name": "EasyPrivacy",
+        "url": "https://easylist.to/easylist/easyprivacy.txt",
+        "description": "Blocks tracking scripts and systems",
+        "format": "adblock",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "Disconnect.me Tracking",
+        "url": "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt",
+        "description": "Disconnect's tracking protection list",
+        "format": "domain",
+        "update_frequency": "weekly"
+      },
+      {
+        "name": "AdGuard Tracking Protection",
+        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/TrackParamFilter/sections/general_url.txt",
+        "description": "AdGuard's tracking protection filter",
+        "format": "adblock",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "Peter Lowe's Ad and Tracking Server List",
+        "url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext",
+        "description": "Comprehensive tracking and ad server list",
+        "format": "hosts",
+        "update_frequency": "weekly"
+      }
+    ],
+    "malware": [
+      {
+        "name": "Malware Domain List",
+        "url": "https://www.malwaredomainlist.com/hostslist/hosts.txt",
+        "description": "Domains hosting malware",
+        "format": "hosts",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "Malware Domains",
+        "url": "https://mirror1.malwaredomains.com/files/justdomains",
+        "description": "Just domains hosting malware",
+        "format": "domain",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "URLVoid Malicious URLs",
+        "url": "https://raw.githubusercontent.com/vokins/yhosts/master/hosts.txt",
+        "description": "Chinese malware and ad hosts",
+        "format": "hosts",
+        "update_frequency": "weekly"
+      },
+      {
+        "name": "Spam404 Main Blacklist",
+        "url": "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
+        "description": "Spam and malware domains",
+        "format": "domain",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "OISD Big List",
+        "url": "https://big.oisd.nl/",
+        "description": "Comprehensive blocklist including malware",
+        "format": "domain",
+        "update_frequency": "daily"
+      }
+    ],
+    "phishing": [
+      {
+        "name": "PhishTank",
+        "url": "https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt",
+        "description": "Active phishing domains",
+        "format": "domain",
+        "update_frequency": "hourly"
+      },
+      {
+        "name": "OpenPhish Premium Feed",
+        "url": "https://openphish.com/feed.txt",
+        "description": "OpenPhish community feed",
+        "format": "url",
+        "update_frequency": "hourly"
+      },
+      {
+        "name": "Anti-Phishing Working Group",
+        "url": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt",
+        "description": "Scam and phishing protection",
+        "format": "hosts",
+        "update_frequency": "daily"
+      }
+    ],
+    "privacy": [
+      {
+        "name": "Fanboy's Enhanced Tracking List",
+        "url": "https://www.fanboy.co.nz/enhancedstats.txt",
+        "description": "Enhanced tracking protection",
+        "format": "adblock",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "I Don't Care About Cookies",
+        "url": "https://www.i-dont-care-about-cookies.eu/abp/",
+        "description": "Removes cookie warnings",
+        "format": "adblock",
+        "update_frequency": "weekly"
+      },
+      {
+        "name": "Disconnect.me Malvertising",
+        "url": "https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt",
+        "description": "Malicious advertising protection",
+        "format": "domain",
+        "update_frequency": "weekly"
+      }
+    ],
+    "social_media": [
+      {
+        "name": "Fanboy's Social Blocking List",
+        "url": "https://easylist.to/easylist/fanboy-social.txt",
+        "description": "Blocks social media widgets and buttons",
+        "format": "adblock",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "AdGuard Social Media Filter",
+        "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SocialFilter/sections/general_extensions.txt",
+        "description": "AdGuard's social media blocking",
+        "format": "adblock",
+        "update_frequency": "daily"
+      }
+    ],
+    "adult_content": [
+      {
+        "name": "Shalla's Blacklists - Porn",
+        "url": "http://www.shallalist.de/Downloads/shallalist.tar.gz",
+        "description": "Comprehensive adult content blocking",
+        "format": "archive",
+        "update_frequency": "weekly",
+        "note": "Requires extraction of porn category"
+      },
+      {
+        "name": "UT1 Blacklist - Adult",
+        "url": "https://dsi.ut-capitole.fr/blacklists/download/adult.tar.gz",
+        "description": "University blacklist for adult content",
+        "format": "archive",
+        "update_frequency": "monthly"
+      },
+      {
+        "name": "Steven Black's Porn Hosts",
+        "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts",
+        "description": "Unified hosts with porn blocking",
+        "format": "hosts",
+        "update_frequency": "daily"
+      }
+    ],
+    "cryptocurrency": [
+      {
+        "name": "Coin Blocker Lists",
+        "url": "https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser",
+        "description": "Cryptocurrency mining protection",
+        "format": "hosts",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "NoCoin Filter List",
+        "url": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt",
+        "description": "Blocks cryptocurrency miners",
+        "format": "hosts",
+        "update_frequency": "weekly"
+      }
+    ],
+    "fake_news": [
+      {
+        "name": "Steven Black's Fake News",
+        "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts",
+        "description": "Unified hosts with fake news blocking",
+        "format": "hosts",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "Fake News Blocklist",
+        "url": "https://raw.githubusercontent.com/marktron/fakenews/master/fakenews",
+        "description": "Curated fake news domain list",
+        "format": "domain",
+        "update_frequency": "weekly"
+      }
+    ],
+    "gambling": [
+      {
+        "name": "Steven Black's Gambling",
+        "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling/hosts",
+        "description": "Unified hosts with gambling blocking",
+        "format": "hosts",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "Shalla's Blacklists - Gambling",
+        "url": "http://www.shallalist.de/Downloads/shallalist.tar.gz",
+        "description": "Comprehensive gambling site blocking",
+        "format": "archive",
+        "update_frequency": "weekly",
+        "note": "Requires extraction of gambling category"
+      }
+    ],
+    "regional_threats": [
+      {
+        "name": "Adblock Plus Russia",
+        "url": "https://easylist-downloads.adblockplus.org/ruadlist+easylist.txt",
+        "description": "Russian-specific threats and ads",
+        "format": "adblock",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "EasyList China",
+        "url": "https://easylist-downloads.adblockplus.org/easylistchina+easylist.txt",
+        "description": "Chinese-specific threats and ads",
+        "format": "adblock",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "Liste FR",
+        "url": "https://easylist-downloads.adblockplus.org/liste_fr+easylist.txt",
+        "description": "French-specific threats and ads",
+        "format": "adblock",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "EasyList Germany",
+        "url": "https://easylist-downloads.adblockplus.org/easylistgermany+easylist.txt",
+        "description": "German-specific threats and ads",
+        "format": "adblock",
+        "update_frequency": "daily"
+      }
+    ],
+    "comprehensive": [
+      {
+        "name": "1Hosts Pro",
+        "url": "https://o0.pages.dev/Pro/hosts.txt",
+        "description": "Comprehensive protection including all categories",
+        "format": "hosts",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "NextDNS Recommended",
+        "url": "https://raw.githubusercontent.com/nextdns/metadata/master/security/threat-intelligence-feeds.json",
+        "description": "NextDNS curated threat intelligence",
+        "format": "json",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "HaGeZi's Ultimate Blocklist",
+        "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@release/hosts/ultimate.txt",
+        "description": "Ultimate protection with all threat categories",
+        "format": "hosts",
+        "update_frequency": "daily"
+      }
+    ]
+  }
+}

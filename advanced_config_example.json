@@ -1,0 +1,165 @@
+# Example Advanced Configuration for Maximum Protection
+# Copy this to your working directory and customize as needed
+
+# This configuration demonstrates how to extend the blocklist sources
+# for maximum protection by adding more aggressive and comprehensive sources
+
+{
+  "metadata": {
+    "name": "Maximum Protection Configuration",
+    "description": "Ultra-comprehensive blocklist collection for maximum security",
+    "version": "1.1.0",
+    "last_updated": "2024-01-01"
+  },
+  "additional_sources": {
+    "ultra_aggressive": [
+      {
+        "name": "OISD Full List",
+        "url": "https://hosts.oisd.nl/",
+        "description": "Comprehensive list including everything",
+        "format": "domain",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "1Hosts Lite",
+        "url": "https://o0.pages.dev/Lite/hosts.txt",
+        "description": "Lightweight but comprehensive protection",
+        "format": "hosts",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "AdGuard DNS Filter Extended",
+        "url": "https://adguardteam.github.io/AdguardFilters/BaseFilter/sections/general_extensions.txt",
+        "description": "Extended AdGuard protection",
+        "format": "adblock",
+        "update_frequency": "daily"
+      }
+    ],
+    "security_focused": [
+      {
+        "name": "Cybercrime Tracker",
+        "url": "http://cybercrime-tracker.net/all.php",
+        "description": "Active cybercrime domains",
+        "format": "domain",
+        "update_frequency": "hourly"
+      },
+      {
+        "name": "Abuse.ch URLhaus",
+        "url": "https://urlhaus.abuse.ch/downloads/hostfile/",
+        "description": "Malware URL hosting domains",
+        "format": "hosts",
+        "update_frequency": "hourly"
+      },
+      {
+        "name": "Feodo Tracker",
+        "url": "https://feodotracker.abuse.ch/downloads/ipblocklist.txt",
+        "description": "Feodo botnet C&C servers",
+        "format": "ip",
+        "update_frequency": "hourly"
+      }
+    ],
+    "privacy_extreme": [
+      {
+        "name": "AdGuard Annoyances",
+        "url": "https://filters.adtidy.org/extension/chromium/filters/14.txt",
+        "description": "Remove annoyances and notifications",
+        "format": "adblock",
+        "update_frequency": "daily"
+      },
+      {
+        "name": "uBlock Annoyances",
+        "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/annoyances.txt",
+        "description": "uBlock Origin annoyances filter",
+        "format": "adblock",
+        "update_frequency": "daily"
+      }
+    ],
+    "content_filtering": [
+      {
+        "name": "YouTube Ads",
+        "url": "https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt",
+        "description": "YouTube advertising domains",
+        "format": "domain",
+        "update_frequency": "weekly"
+      },
+      {
+        "name": "Smart TV Ads",
+        "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt",
+        "description": "Smart TV tracking and ads",
+        "format": "domain",
+        "update_frequency": "weekly"
+      },
+      {
+        "name": "Windows Telemetry",
+        "url": "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt",
+        "description": "Windows 10/11 telemetry blocking",
+        "format": "hosts",
+        "update_frequency": "weekly"
+      }
+    ]
+  },
+  "custom_categories": {
+    "gaming": [
+      {
+        "name": "Game Ads and Tracking",
+        "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt",
+        "description": "Gaming console ads and tracking",
+        "format": "adblock",
+        "update_frequency": "weekly"
+      }
+    ],
+    "iot_security": [
+      {
+        "name": "IoT Malware Domains",
+        "url": "https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/malware/iot.txt",
+        "description": "IoT-specific malware domains",
+        "format": "domain",
+        "update_frequency": "daily"
+      }
+    ]
+  },
+  "whitelist_additions": [
+    "# Add critical domains that should never be blocked",
+    "# even in maximum protection mode",
+    "",
+    "# Banking",
+    "secure.bankofamerica.com",
+    "online.wellsfargo.com",
+    "secure.chase.com",
+    "",
+    "# Streaming services",
+    "netflix.com",
+    "hulu.com",
+    "amazon.com",
+    "primevideo.com",
+    "",
+    "# Essential CDNs",
+    "cdnjs.cloudflare.com",
+    "unpkg.com",
+    "maxcdn.bootstrapcdn.com",
+    "",
+    "# Development",
+    "github.com",
+    "stackoverflow.com",
+    "npmjs.com"
+  ],
+  "update_schedule": {
+    "high_priority": ["malware", "phishing", "security_focused"],
+    "medium_priority": ["advertising", "tracking", "privacy"],
+    "low_priority": ["social_media", "gaming", "content_filtering"]
+  },
+  "performance_settings": {
+    "max_domains_per_category": 1000000,
+    "enable_compression": true,
+    "parallel_downloads": 5,
+    "retry_attempts": 5,
+    "timeout_seconds": 60
+  },
+  "output_options": {
+    "generate_category_files": true,
+    "generate_combined_file": true,
+    "include_statistics": true,
+    "compression_format": "gzip",
+    "backup_previous": true
+  }
+}

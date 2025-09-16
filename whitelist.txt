@@ -1,0 +1,75 @@
+# Whitelist for Blockage Pi-Hole Blocklist Aggregator
+# These domains will be excluded from all blocklists to prevent breaking functionality
+
+# Essential services
+localhost
+localhost.localdomain
+local
+broadcasthost
+
+# DNS servers
+8.8.8.8
+8.8.4.4
+1.1.1.1
+1.0.0.1
+9.9.9.9
+
+# Major CDNs and infrastructure
+cloudflare.com
+amazonaws.com
+googleusercontent.com
+googlevideo.com
+gstatic.com
+googleapis.com
+azure.com
+akamai.com
+fastly.com
+jsdelivr.net
+
+# Essential Microsoft services
+microsoft.com
+office.com
+outlook.com
+live.com
+hotmail.com
+msn.com
+xbox.com
+skype.com
+teams.microsoft.com
+
+# Essential Google services
+google.com
+gmail.com
+youtube.com
+googledrive.com
+docs.google.com
+maps.google.com
+
+# Essential Apple services
+apple.com
+icloud.com
+itunes.com
+appstore.com
+
+# Essential social media (basic functionality)
+facebook.com
+instagram.com
+twitter.com
+linkedin.com
+
+# Banking and financial (safety critical)
+paypal.com
+stripe.com
+visa.com
+mastercard.com
+
+# Government sites
+gov
+.gov
+.mil
+.edu
+
+# Common false positives
+gravatar.com
+disqus.com
+typekit.net
